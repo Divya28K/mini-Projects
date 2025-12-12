@@ -1,0 +1,32 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { background:#f8f8f8; }
+
+/* Header */
+header { display:flex; justify-content:space-between; align-items:center; padding:20px; background:#333; color:white; }
+header nav a { color:white; margin-left:20px; text-decoration:none; }
+
+/* Hero Slider */
+.hero { position:relative; height:400px; overflow:hidden; margin-bottom:40px; }
+.hero-slider img { width:100%; height:400px; object-fit:cover; display:none; }
+
+/* Sections */
+section { padding:40px 20px; text-align:center; }
+.product-list { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.product { background:white; border:1px solid #ccc; padding:20px; width:220px; text-align:center; transition:transform 0.3s; }
+.product:hover { transform:scale(1.05); }
+.product img { width:200px; height:200px; object-fit:cover; margin-bottom:10px; }
+.product button { margin-top:10px; padding:10px 15px; border:none; background:#333; color:white; cursor:pointer; }
+.product button:hover { background:#555; }
+
+/* Filters */
+.filters { margin-bottom:20px; }
+.filters button { margin:5px; padding:8px 12px; border:none; background:#333; color:white; cursor:pointer; }
+.filters button:hover { background:#555; }
+
+/* Footer */
+footer { background:#333; color:white; padding:20px; margin-top:40px; }
+
+/* Form */
+form input, form textarea { width:100%; padding:10px; margin-bottom:10px; }
+form button { padding:10px 20px; background:#333; color:white; border:none; cursor:pointer; }
+form button:hover { background:#555; }

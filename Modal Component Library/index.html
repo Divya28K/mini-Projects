@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Component Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2> Popup Component Library</h2>
+
+    <button class="btn" onclick="openModal('alertModal')">Open Alert Modal</button>
+    <button class="btn" onclick="openModal('confirmModal')">Open Confirm Modal</button>
+    <button class="btn" onclick="openModal('formModal')">Open Form Modal</button>
+
+    <!-- --------------- ALERT MODAL ---------------- -->
+    <div class="modal" id="alertModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('alertModal')">&times;</span>
+            <h3>Alert Message</h3>
+            <p>This is a simple alert popup modal.</p>
+            <button class="btn" onclick="closeModal('alertModal')">OK</button>
+        </div>
+    </div>
+
+    <!-- --------------- CONFIRM MODAL ---------------- -->
+    <div class="modal" id="confirmModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('confirmModal')">&times;</span>
+            <h3>Are you sure?</h3>
+            <p>This action cannot be undone.</p>
+            <button class="btn" onclick="confirmAction()">Yes</button>
+            <button class="btn cancel" onclick="closeModal('confirmModal')">No</button>
+        </div>
+    </div>
+
+    <!-- --------------- FORM MODAL ---------------- -->
+    <div class="modal" id="formModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('formModal')">&times;</span>
+            <h3>Login Form</h3>
+
+            <input type="text" id="username" placeholder="Enter Username">
+            <input type="password" id="password" placeholder="Enter Password">
+
+            <button class="btn" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Art Prompt Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Art Prompt Generator</h1>
+    <p>Get weird, funny, and creative art ideas instantly!</p>
+
+    <div class="prompt-box" id="promptBox">
+      <p id="promptText">Click "Generate Prompt" to get started!</p>
+    </div>
+
+    <div class="buttons">
+      <button onclick="generatePrompt()">✨ Generate Prompt</button>
+      <button id="copyBtn">📋 Copy</button>
+      <button id="saveBtn">💾 Save</button>
+      <button id="shareBtn">🐦 Share</button>
+    </div>
+
+    <div class="saved-prompts">
+      <h3>Saved Prompts:</h3>
+      <ul id="savedList"></ul>
+    </div>
+  </div>
+
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

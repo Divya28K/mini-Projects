@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniture Store - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Furniture Store</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-slider">
+    <img src="images/hero1.jpg" alt="Living Room">
+    <img src="images/hero2.jpg" alt="Stylish Sofa">
+  </div>
+</section>
+
+<section id="featured">
+  <h2>Featured Products</h2>
+  <div class="product-list">
+    <div class="product" data-id="1">
+      <img src="images/sofa1.jpg" alt="Comfort Sofa">
+      <h3>Comfort Sofa</h3>
+      <p>$350</p>
+      <button onclick="addToCart(1)">Add to Cart</button>
+    </div>
+    <div class="product" data-id="2">
+      <img src="images/chair1.jpg" alt="Modern Chair">
+      <h3>Modern Chair</h3>
+      <p>$120</p>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+    <div class="product" data-id="3">
+      <img src="images/table1.jpg" alt="Wooden Table">
+      <h3>Wooden Table</h3>
+      <p>$200</p>
+      <button onclick="addToCart(3)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Furniture Store. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

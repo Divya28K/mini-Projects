@@ -1,0 +1,49 @@
+/* Default Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --btn-bg: #4444ff;
+    --btn-text: #ffffff;
+    --transition: 0.3s;
+}
+
+/* Dark Theme Variables */
+.dark {
+    --bg-color: #1d1d1d;
+    --text-color: #f1f1f1;
+    --btn-bg: #ff8800;
+    --btn-text: #000000;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background var(--transition), color var(--transition);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    opacity: 0.9;
+}

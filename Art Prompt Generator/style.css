@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Comic Neue', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(120deg, #ff7e5f, #feb47b);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  transition: background 0.5s ease;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+.container {
+  background-color: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+.prompt-box {
+  background-color: rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 20px;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: opacity 0.4s ease;
+}
+
+.buttons button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.saved-prompts {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.saved-prompts ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
