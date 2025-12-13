@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Register as Intern/Volunteer</h2>
+  <form id="registrationForm">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <select id="role">
+      <option value="Intern">Intern</option>
+      <option value="Volunteer">Volunteer</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const role = document.getElementById("role").value;
+
+      // Get existing applicants or empty array
+      let applicants = JSON.parse(localStorage.getItem("applicants")) || [];
+
+      // Add new applicant
+      applicants.push({ name, email, role });
+
+      // Save back to localStorage
+      localStorage.setItem("applicants", JSON.stringify(applicants));
+
+      document.getElementById("message").textContent = "Submitted successfully!";
+      document.getElementById("registrationForm").reset();
+    });
+  </script>
+</body>
+</html>

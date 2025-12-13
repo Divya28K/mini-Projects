@@ -1,0 +1,71 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2 {
+  color: #2c3e50;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+a:hover {
+  background-color: #2980b9;
+}
+
+/* Inputs, Selects */
+input, select {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  width: 320px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e8449;
+}
+
+/* Success Message */
+#message {
+  color: #2ecc71;
+  margin-top: 10px;
+}
+
+/* Admin Page Styling */
+#applicantList {
+  list-style: none;
+  padding-left: 0;
+}
+
+#applicantList li {
+  background-color: #ecf0f1;
+  margin: 10px 0;
+  padding: 12px;
+  border-left: 6px solid #8e44ad;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}

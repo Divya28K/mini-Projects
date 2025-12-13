@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin View</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Registered Applicants</h2>
+  <ul id="applicantList"></ul>
+
+  <script>
+    const applicantList = document.getElementById("applicantList");
+
+    // Get saved applicants
+    const applicants = JSON.parse(localStorage.getItem("applicants")) || [];
+
+    if (applicants.length === 0) {
+      applicantList.innerHTML = "<li>No applicants registered yet.</li>";
+    } else {
+      applicants.forEach((applicant) => {
+        const li = document.createElement("li");
+        li.textContent = `${applicant.name} - ${applicant.email} (${applicant.role})`;
+        applicantList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
+
